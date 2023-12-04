@@ -1,0 +1,94 @@
+.principal_bar{
+    background-color: indigo;
+    color: white;
+    overflow: hidden;
+}
+
+.options_navegation_bar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'sans-serif';
+    display: inline-block;
+    background-color: indigo;
+}
+
+.options_navegation_bar li a{
+    color:white;
+    text-decoration: none;
+    padding: 2px;
+    transform: translateY(-50%);
+    margin-left: 20px;
+}
+
+.options_navegation_bar li a :hover{
+    background-color: white;
+    color: black;
+}
+
+.options_navegation_bar li a img{
+    height: 50px;
+    margin-right: 2px;
+    size: 6px;
+    transform: translateY(+60%);
+}
+
+.options_navegation_bar li img{
+    height: 50px;
+    size: 10px;
+}
+
+.options_navegation_bar img{
+    height: 35px;
+}
+
+.options_navegation_bar li{
+    display: inline-flex;
+    list-style-type: none;
+    background-color: indigo;
+    color:white;
+    align-items: center;
+
+}
+
+
+.pato_logo img{
+    height: 35px;
+    margin-left: 10px;
+    size: 10px;
+    align-items: center;
+    transform: translateY(+10%);
+}
+
+.company_name{
+    margin-right: 10px;
+    align-items: center;
+    display: inline-block;
+    letter-spacing: 2px;
+    font-weight: bold;
+    
+}
+  
+
+.company_name li a h2{
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    margin-right: 10px;
+    transform: translateY(-100%);
+   
+}
+
+.company_name h2 {
+    margin: 0;
+    padding: 0;
+    line-height: 0.7;
+    line-break: 0;
+    transform: translateY(-100%);
+    font-weight: bold;
+}
+
+.IniciarSesionMain{
+    margin-left: 900px;
+};
+
