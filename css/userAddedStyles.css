@@ -75,7 +75,7 @@
     padding: 0;
     line-height: 0;
     margin-right: 10px;
-    transform: translateY(-100%);
+    transform: translateY(-10%);
    
 }
 
@@ -84,7 +84,7 @@
     padding: 0;
     line-height: 0.7;
     line-break: 0;
-    transform: translateY(-100%);
+    transform: translateY(-10%);
     font-weight: bold;
     text-shadow: 1px 1px 1px white;
 }
@@ -92,6 +92,7 @@
 .IniciarSesionMain{
     margin-left: 900px;
 };
+
 
 .RegisterUser{
     margin-left: 80px;

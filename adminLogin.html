@@ -4,21 +4,21 @@
         <meta charset = "UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Poppins&display=swap">
-        <link rel = "stylesheet" type = "text/css" href = "css/loginStyles.css">
+        <link rel = "stylesheet" type = "text/css" href = "css/adminLogin.css">
         <link rel="icon" href="images/rubber-duck.png" type="image/png">
-        <title>Iniciar Sesión</title>
+        <title>Administrador</title>
         <script>
             var regexNumerico = /^[0-9]+$/; // Acepta solo números
 
-            var num_cuenta = document.getElementById("num_cuenta").value;
+            var id_admin = document.getElementById("id_admin").value;
 
-            if(num_cuenta.length !==10 || !regexNumerico.test(num_cuenta)){
-                alert("El número de cuenta no cumple con el formato.");
+            if(id_admin.length !==11 || !regexNumerico.test(id_admin)){
+                alert("El identificador del administrador no cumple con el formato.");
                 return false;
             }
-
         </script>
     </head>
+  
     <body>
         <div class = "principal_bar">
             <nav>
@@ -30,18 +30,22 @@
                 </ul>
             </nav>
         </div>
+
+
+
         <div class = "login_form">
 
             <div class = back>
-                <img src ="images/back.png" alt = "back button">
+                    <img src ="images/back.png" alt = "back button">
             </div>
+
             <ul class = "central-container">
-                <li class = login_image><img src="images/profile.png" alt = "login image"></li>
-                <li class = "title_login"><h3>INICIAR SESIÓN</h3></li>
-                <form method = "post" action= "php/verifyCuenta.php">
-                    <label for = "num_cuenta">Número de Cuenta</label>
+                <li class = login_image><img src="images/admin.png" alt = "admin image"></li>
+                <li class = "title_login"><h3>ADMINISTRADOR</h3></li>
+                <form method = "post" action= "php/verifyAdmin.php">
+                    <label for = "id_admin">Admin</label>
                     <br>
-                    <li><input  class = "num_cuenta"name = "num_cuenta" required type ="text" id="num_cuenta" placeholder="10 dígitos"></li>
+                    <li><input  class = "id_admin"name = "id_admin" required type ="text" id="id_admin" placeholder=></li>
                     <br></br>
                     <label for = "contraseña">Contraseña:</label>
                     <br>
@@ -49,10 +53,7 @@
                     <br></br>
                     <input type = "submit" value="Ingresar">
                 </form>
-                <li class = "without-account"><a href="register.html>">¿No tienes una cuenta? ¡Regístrate!</a></li>
-                <li class = "admin_login"><a href = "adminLogin.html">Administrador</a></li>
-            </ul>   
+            </ul>
         </div>
     </body>
-
 </html>

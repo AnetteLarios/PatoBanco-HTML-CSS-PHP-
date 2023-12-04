@@ -15,8 +15,9 @@ $sentencia = $con->prepare("INSERT INTO cliente(rfc, nombre, apellido_paterno, a
 $resultado = $sentencia->execute([$rfc, $nombre, $apellido_paterno, $apellido_materno, $telefono]);
 
 if($resultado === TRUE ){
-    echo "User added successfully";
-    header("Refresh: 2; URL = ../index.html");
+    $html = file_get_contents('../userAddedSuccessfully.html');
+    echo $html;
+    header("Refresh: 15; URL = ../index.html");
 } 
-else echo "Couldn't add user, please try again.";
+else echo "Couldn't add usesr, please try again.";
 ?>

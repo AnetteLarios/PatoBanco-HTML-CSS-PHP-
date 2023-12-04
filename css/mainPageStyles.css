@@ -86,6 +86,7 @@
     line-break: 0;
     transform: translateY(-10%);
     font-weight: bold;
+    text-shadow: 1px 1px 1px white;
 }
 
 .IniciarSesionMain{
