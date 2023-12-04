@@ -8,24 +8,24 @@ $id_admin = $_POST["id_admin"];
 $contraseña = $_POST["contraseña"];
 
 $sentencia = $con->prepare("SELECT contraseña FROM acceso_admin WHERE id_admin = ?");
-$sentencia->bind_param("s", $id_admin);
-$sentencia->execute();
-$resultado = $sentencia->get_result();
+$sentencia->execute([$id_admin]);
 
-if($resultado->num_rows > 0 ){
-    $fila = $resultado->fetch_assoc();
-    $contrasena_bd = $fila['contraseña']; // Aquí estaba el error
-    if ($contraseña === $contrasena_bd) { // Y aquí
+$resultado = $sentencia->fetch();
+
+if($resultado){
+    $contrasena_bd = $resultado['contraseña'];
+    if ($contraseña === $contrasena_bd) {
         header("Refresh: 2; URL = ../homeAdmin.html");
     } else {
         echo "Contraseña incorrecta. Intente nuevamente";
         header("Refresh: 2; URL = ../adminLogin.html");    
     }
-
 } else {
     echo  "User not found";
     header("Refresh: 2; URL = ../adminLogin.html");    
 }
-$sentencia->close();
-$con->close();
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 ?>
