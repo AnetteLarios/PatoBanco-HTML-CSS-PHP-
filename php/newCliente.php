@@ -1,5 +1,9 @@
 <?php
 #Salir si alguno de los datos no está presente 
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 if(!isset($_POST["rfc"])|| !isset($_POST["nombre"]) || !isset($_POST["apellido_materno"]) || !isset($_POST["apellido_paterno"]) || !isset($_POST["telefono"])) exit();
 
 #si todos los datos se han llenado...
@@ -19,5 +23,5 @@ if($resultado === TRUE ){
     echo $html;
     header("Refresh: 15; URL = ../index.html");
 } 
-else echo "Couldn't add usesr, please try again.";
+else echo "Couldn't add user, please try again.";
 ?>

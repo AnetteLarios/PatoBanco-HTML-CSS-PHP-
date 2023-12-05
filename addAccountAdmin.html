@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+        <link rel = "stylesheet" type = "text/css" href = "css/register.css">
+        <link rel="icon" href="images/rubber-duck.png" type="image/png">
+        <title>Añadir Cuenta</title>
+        <script>
+            function validarCampos() {
+                var regexFlotante = /^[+-]?\d+(\.\d+)?$/;
+                var regex = /^[a-zA-Z\s]+$/; // Acepta letras y espacios en blanco
+                var regexAlfanumerico = /^[A-Z0-9]+$/; // Acepta letras y números
+                var regexNumerico = /^[0-9]+$/; // Acepta solo números
+                var campos = [ "num_cuenta", "saldo"];
+                
+
+                var rfc = document.getElementById("rfc").value;
+                var nombre = document.getElementById("nombre").value;
+                var apellido_materno = document.getElementById("apellido_materno").value;
+                var apellido_paterno = document.getElementById("apellido_paterno").value;
+                var telefono = document.getElementById("telefono").value
+
+                if (num_cuenta.length !== 10 || !regexNumerico.test(num_cuenta)) {
+                    alert(" El número de cuenta debe tener una longitud de 10 dígitos.");
+                    return false;
+                }
+
+                if(!regexFlotante.test(saldo)){
+                    alert("Debe insertar un número flotante")
+                    return false;
+                }
+                var fecha_afiliacion_formatted = formatearFecha(fecha_afiliacion);
+                document.getElementById("fecha_afiliacion").value = fecha_afiliacion_formatted;
+
+                return true;
+            }
+            function formatearFecha(fecha) {
+            var date = new Date(fecha);
+            var year = date.getFullYear();
+            var month = ("0" + (date.getMonth() + 1)).slice(-2);
+            var day = ("0" + date.getDate()).slice(-2);
+            return year + "-" + month + "-" + day;
+        }
+        </script>
+    </head>
+    <body>
+        <div class = "principal_bar">
+            <nav>
+                <ul class = "options_navegation_bar">
+                    <li class = "pato_logo"><img src = "images/rubber-duck.png" alt = "logo"></li>
+                    <li class = "company_name"><a href = "index.html"><h2>PATO BANCO</h2></a></li>
+                    <li class = "IniciarSesionMain"><a href = "login.html">Iniciar Sesión</a></li>
+                    <li class = "RegisterUser"><a href = "register.html">Registrarse</a></li>
+                    <li></li>
+                </ul>
+            </nav>
+        </div>
+        <form method ="post" action = "php/newClientAccountAdmin.php">
+            <label for ="num_cuenta">Número de cuenta</label>
+            <br>
+            <input name = "num_cuenta" required type = "text" id  = "num_cuenta" placeholder="10 dígitos">
+            <br>
+            <label for ="rfc_cliente">RFC</label>
+            <br>
+            <input name = "rfc_cliente" required type = "text" id = "rfc_cliente">
+            <br>
+            <label for = "saldo">Saldo</label>
+            <br>
+            <input name = "saldo" required type ="number" id="saldo">
+            <br>
+            <label for = "fecha_afiliación">Fecha de afiliación</label>
+            <br>
+            <input name = "fecha_afiliación" required type ="date" id="fecha_afiliación">
+            <br>
+            <label for ="contrasena">Contraseña</label>
+            <br>
+            <input name="contrasena" required type = "password" id ="contrasena">
+            <br>
+            <input type = "submit" value = "Registrar Cuenta">
+
+        </form>
+
+    </body>
+</html>

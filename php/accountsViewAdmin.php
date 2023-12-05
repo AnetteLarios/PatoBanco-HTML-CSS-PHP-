@@ -19,8 +19,8 @@
                 </ul>
             </nav>
         </div>
-
         <div class = "center-container">
+            <a href = "homeAdmin.php"><img src = "../images/back.png" alt = "boton atrás"></a>
 
 <?php
 

@@ -59,7 +59,7 @@ $resultado= $sentencia->fetchAll(PDO::FETCH_OBJ);
                 <thead>
                     <tr>
                         <th>Número de cuenta</th>
-                        <th class = "password">Contrasena</th>
+                        <th >Contraseña</th>
                         <th>Fecha de afiliación</th>
                         <th>RFC</th>
                         <th>Nombre</th>
@@ -79,8 +79,9 @@ $resultado= $sentencia->fetchAll(PDO::FETCH_OBJ);
                     <?php foreach($resultado as $fila){ ?>
                     <tr>
                         <td><?php echo $fila->num_cuenta; ?></td>
-                        <td><?php echo $fila->contraseña; ?></td>
+                        <td class = "password"><?php echo $fila->contrasena; ?></td>
                         <td><?php echo $fila->fecha_afiliacion; ?></td>
+                        <td><?php echo $fila->rfc; ?></td>
                         <td><?php echo $fila->nombre; ?></td>
                         <td><?php echo $fila->apellido_paterno; ?></td>
                         <td><?php echo $fila->apellido_materno; ?></td>
@@ -92,6 +93,8 @@ $resultado= $sentencia->fetchAll(PDO::FETCH_OBJ);
                         <td><?php echo $fila->ciudad; ?></td>
                         <td><?php echo $fila->estado; ?></td>
                         <td><?php echo $fila->pais; ?></td>
+                        <td><a href="<?php echo "editClientAdmin.php?num_cuenta=" . $fila->num_cuenta?>">Editar datos</td>
+                        <td><a href="<?php echo "delete.php?num_cuenta=" . $fila->num_cuenta?>">Eliminar</td>
                     </tr>
                     <?php } ?>
                 </tbody>

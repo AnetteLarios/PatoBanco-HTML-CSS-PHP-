@@ -4,6 +4,7 @@
     overflow: hidden;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', 'sans-serif';
 }
 
 .options_navegation_bar{
@@ -94,12 +95,8 @@
 
 .cerrar_sesion{
     margin-left: 1025px;
-    transform: translateY(+10%)
-};
-
-
-.password{
-    max-width: 50px;
-    white-space: nowrap;
-    overflow: hidden;
+    transform: translateY(+10%);
+    color:white;
 }
+
+

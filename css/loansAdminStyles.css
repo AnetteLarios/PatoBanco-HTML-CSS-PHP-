@@ -96,10 +96,3 @@
     margin-left: 1025px;
     transform: translateY(+10%)
 };
-
-
-.password{
-    max-width: 50px;
-    white-space: nowrap;
-    overflow: hidden;
-}
