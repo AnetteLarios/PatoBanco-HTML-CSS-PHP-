@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             // Compara la contraseña hasheada almacenada con la contraseña ingresada
             if (password_verify($contrasena, $row["contrasena"])) {
                 // Contraseña válida, puedes redirigir o realizar otras acciones aquí
-                header("Location: homeClient.php");
+                header("Location: homeClient.php?num_cuenta=$num_cuenta");
                 exit();
             } else {
                 // Contraseña incorrecta

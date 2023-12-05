@@ -96,3 +96,48 @@
 .RegisterUser{
     margin-left: 80px;
 }
+
+.register-form{
+    display: flex;
+    font-family: 'Poppins', 'sans-serif';
+    list-style-type: none;
+
+}
+
+.register-form li{
+    list-style-type: none;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.register-form li{
+    list-style-type: none;
+    font-family: 'Poppins', 'sans-serif';
+}
+.register-form li img{
+    list-style-type: none;
+    font-family: 'Poppins', 'sans-serif';
+    height: 40px;
+    display:flex;
+    transform: translateY(+10%);
+
+}
+
+.title{
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.title h3{
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.register_image{
+    height: 40px;
+    display:flex;
+    transform: translateY(+10%);
+}
+
+.register_image img{
+    height: 40px;
+    display: flex;
+    transform: translateY(+10%);
+}

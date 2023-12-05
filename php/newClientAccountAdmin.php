@@ -36,7 +36,7 @@ $id_direccion_cliente  = $con->lastInsertId();
 $sentencia_direccion_cliente = $con->prepare("INSERT INTO direccion_cliente VALUES(?,?);");
 $resultado_direccion_cliente = $sentencia_direccion_cliente->execute([$rfc_cliente, $id_direccion_cliente]);
 
-if($resultado === TRUE && $resultado_cuenta_cliente ===TRUE && $resultado_direcciones_cliente ===TRUE && resultado_direccion_cliente === TRUE){
+if($resultado === TRUE && $resultado_cuenta_cliente ===TRUE && $resultado_direcciones_cliente ===TRUE && $resultado_direccion_cliente === TRUE){
     header("Refresh: 2; URL = accountsViewAdmin.php");
     echo "Cuenta añadida exitosamente";
     

@@ -33,7 +33,7 @@
         <div class = "login_form">
 
             <div class = back>
-                <img src ="images/back.png" alt = "back button">
+                <a href="index.html"><img src ="images/back.png" alt = "back button"></a>
             </div>
             <ul class = "central-container">
                 <li class = login_image><img src="images/profile.png" alt = "login image"></li>
@@ -41,11 +41,11 @@
                 <form method = "post" action= "php/verifyCuenta.php">
                     <label for = "num_cuenta">Número de Cuenta</label>
                     <br>
-                    <li><input  class = "num_cuenta"name = "num_cuenta" required type ="text" id="num_cuenta" placeholder="10 dígitos"></li>
+                    <input  class = "num_cuenta"name = "num_cuenta" required type ="text" id="num_cuenta" placeholder="10 dígitos">
                     <br></br>
                     <label for = "contrasena">Contraseña:</label>
                     <br>
-                    <li><input  class = "contrasena" name = "contrasena" required type = "password" id="contrasena" placeholder=""></li>
+                    <input  class = "contrasena" name = "contrasena" required type = "password" id="contrasena" placeholder="">
                     <br></br>
                     <input type = "submit" value="Ingresar">
                 </form>

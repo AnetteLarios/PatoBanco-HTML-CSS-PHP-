@@ -63,28 +63,34 @@
             </nav>
         </div>
 
-        <form method="post" action = "php/newCliente.php">
-            <label for = "rfc">RFC:</label>
-            <br>
-            <input name = "rfc" required type ="text" id="rfc" placeholder="13 caracteres">
-            <br></br>
-            <label for = "nombre">Nombre:</label>
-            <br>
-            <input name = "nombre" required type = "text" id="nombre" placeholder = "Nombre(s)">
-            <br></br>
-            <label for = "apellido_paterno">Apellido Paterno</label>
-            <br>
-            <input name = "apellido_paterno" required type = "text" id="apellido_paterno" placeholder = "">
-            <br></br>
-            <label for = "apellido_materno" >Apellido Paterno</label>
-            <br>
-            <input name = "apellido_materno" required type = "text" id = "apellido_materno" placeholder ="">
-            <br></br>
-            <label for="telefono">Teléfono</label>
-            <br>
-            <input name="telefono" required type = "text" id="telefono", placeholder="">
-            <br></br>
-            <input type ="submit" value = "Registrarse">
-        </form>
+        <div class = "register-form">
+                <ul class = "register">
+                    <li class = "register_image"><img src = "images/profile.png"></li>
+                    <li class = "title"><h3>REGISTRARSE</h3></li>
+                </ul>
+            <form method="post" action = "php/newCliente.php">
+                <label for = "rfc">RFC:</label>
+                <br>
+                <input name = "rfc" required type ="text" id="rfc" placeholder="13 caracteres">
+                <br></br>
+                <label for = "nombre">Nombre:</label>
+                <br>
+                <input name = "nombre" required type = "text" id="nombre" placeholder = "Nombre(s)">
+                <br></br>
+                <label for = "apellido_paterno">Apellido Paterno</label>
+                <br>
+                <input name = "apellido_paterno" required type = "text" id="apellido_paterno" placeholder = "">
+                <br></br>
+                <label for = "apellido_materno" >Apellido Paterno</label>
+                <br>
+                <input name = "apellido_materno" required type = "text" id = "apellido_materno" placeholder ="">
+                <br></br>
+                <label for="telefono">Teléfono</label>
+                <br>
+                <input name="telefono" required type = "text" id="telefono", placeholder="">
+                <br></br>
+                <input type ="submit" value = "Registrarse">
+            </form>
+        </div>
     </body>
 </html>
