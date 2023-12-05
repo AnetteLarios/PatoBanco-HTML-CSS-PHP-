@@ -23,7 +23,7 @@
         <div class = "center-container">
 
          <ul class = "accounts-data">
-                <li class = "back_button"><a href = "accountsViewAdmin.php"></a><img src = "../images/back.png"></li>
+                <li class = "back_button"><a href = "accountsViewAdmin.php">Back/a><img src = "../images/back.png" alt = "back_button"></li>
                 <li class = "profile_image"><img src = "../images/profile.png" alt = "accounts"></li>
                 <li class = "title"><h3>Datos del cliente</h3></li>
         </ul>
